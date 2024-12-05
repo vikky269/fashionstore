@@ -24,15 +24,15 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       <div className="md:hidden cursor-pointer bg-green-600">
-       <div>
-        {isopen ? ( <img src="/close.png" alt="" className='w-10 z-50' onClick={togglemenu}  />) : (
-           <img src="/burger.png" alt="" className='w-10 z-50' onClick={togglemenu}  />
+       <div className=''>
+        {isopen ? ( <img src="/close.png" alt="" className='w-10 ' onClick={togglemenu}  />) : (
+           <img src="/burger.png" alt="" className='w-10 ' onClick={togglemenu}  />
         )}
        </div>
 
        {/* Menu Items */}
         {isopen && (
-          <div className='absolute top-35 left-0 bg-green-200 h-screen flex items-center text-2xl justify-center font-title gap-24 w-full py-3'>
+          <div className='absolute top-20 left-0 bg-green-400 h-screen flex items-center text-4xl font-semibold gap-5 justify-center font-title w-full py-3'>
             <ul className="cursor-pointer">
               <li className="hover:text-green-600 cursor-pointer">Home</li>
               <li className="hover:text-green-600 cursor-pointer">Shop</li>

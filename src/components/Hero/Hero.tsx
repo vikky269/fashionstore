@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
       {/* Right Image */}
       <div className="mt-10 md:mt-0 w-full md:w-1/2 flex justify-center">
         <img
-          src="/heroimg.png" // Replace with your image URL
+          src="/heroimg.png" 
           alt="Fashion model"
           className=" bg-[#6BC785] rounded-tl-[70px] rounded-tr-[32px] rounded-bl-[32px] rounded-br-[70px] shadow-md  h-[400px]"
         />
