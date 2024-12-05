@@ -37,7 +37,7 @@ const BestSelling:React.FC = () => {
   return (
     <section className=' flex flex-col items-center text-center mt-8 md:mt-12 font-title'>
         <span className='text-3xl text-green-800 font-bold '>Best Selling</span>
-        <span className='text-[#224F34] max-w-sm md:max-w-0 text-md mt-6 md:mt-8'>Get in on the trend with our curated selection of best-selling styles.</span>
+        <span className='text-[#224F34] px-3 md:max-w-0 text-md mt-6 md:mt-8'>Get in on the trend with our curated selection of best-selling styles.</span>
 
         <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 md:gap-6 mt-8'>
            {BestSeller.map((seller)=> (

@@ -31,8 +31,8 @@ const Designer = [
 const DesignerClothes:React.FC = () => {
   return (
     <section className='flex flex-col justify-center items-center text-center mt-8 md:mt-16 font-title'>
-        <span className='md:text-5xl text-3xl flex-wrap text-green-800 font-medium'>Designer Clothes for You</span>
-        <span className='text-[#224F34]  md:max-w-none md:text-md mt-6 md:mt-9'>Immerse yourself in the world of luxury fashion with our meticulously crafted designer clothes!.</span>
+        <span className='md:text-5xl px-3 text-3xl flex-wrap text-green-800 font-medium'>Designer Clothes for You</span>
+        <span className='text-[#224F34] px-3 md:text-md mt-6 md:mt-9'>Immerse yourself in the world of luxury fashion with our meticulously crafted designer clothes!.</span>
 
         <div className='grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 md:gap-6 mt-8'>
            {Designer.map((designer)=> (
