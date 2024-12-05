@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#224f34] text-white py-8 font-title md:px-12 pt-16 mt-20 overflow-hidden">
+    <footer className="bg-[#224f34] text-white py-8 px-3 font-title md:px-12 pt-16 mt-20 overflow-hidden">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* Logo and Social Media */}
         <div>

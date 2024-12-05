@@ -31,7 +31,7 @@ const Feedback:React.FC = () => {
                       <div className='flex flex-col items-start justify-start p-6 shadow-lg cursor-pointer rounded-md hover:bg-[#c2efd4]'>
                           <img src='/feed.png' alt={item.name}  />
                           <h3 className='mt-4 text-lg font-medium text-gray-800'>{item.name}</h3>
-                          <p className='mt-2  max-w-[13rem] md:max-w-[19rem] text-gray-600 text-sm'>{item.message}</p>
+                          <p className='mt-2  max-w-[15rem] md:max-w-[19rem] text-gray-600 text-sm'>{item.message}</p>
                       </div>
                   
               ))}
