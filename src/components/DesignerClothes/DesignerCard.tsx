@@ -12,12 +12,12 @@ interface DesignerCardProps  {
 
 const DesignerCard:React.FC<DesignerCardProps> = ({designer}) => {
   return (
-    <div className='flex flex-col items-center pt-5' >
+    <div className='flex flex-col items-center pt-5 cursor-pointer' >
     <img
       src={designer.image}
       alt={designer.title}
-      className="h-[70%] mb-4"
-      style={{ backgroundColor: designer.background }}
+      className="md:h-[400px] w-[65%] md:W-[85%] mb-4 border-2 border-[#997b18] px-1 py-1 hover:scale-105 transition-transform transform"
+      // style={{ backgroundColor: designer.background }}
     />
     <h3 className="text-lg font-semibold text-gray-700 mb-2">
       {designer.title}

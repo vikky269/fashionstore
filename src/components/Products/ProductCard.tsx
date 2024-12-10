@@ -12,11 +12,11 @@ interface ProductCardProps {
 
 const ProductCard:React.FC<ProductCardProps> = ({product}) => {
   return (
-    <div className='flex flex-col items-center'>
+    <div className='flex flex-col items-center mb-6'>
             <img
               src={product.image}
               alt={product.title}
-              className="h-[70%] mb-4"
+              className="md:h-[250px] md:w-[280px] w-[75%] mb-4 rounded-tl-md rounded-tr-md cursor-pointer transform transition-transform hover:scale-105 duration-300" 
             />
             <h3 className="text-sm font-semibold text-[#373737] text mb-2">
               {product.title}

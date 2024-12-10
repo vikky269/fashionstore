@@ -15,11 +15,11 @@ interface BestSellingCardProps {
 
 const BestSellingCard:React.FC<BestSellingCardProps> = ({seller}) => {
   return (
-    <div className='flex flex-col items-center' >
+    <div className='flex flex-col items-center md:shadow-lg cursor-pointer'>
       <img
         src={seller.image}
         alt={seller.title}
-        className="h-[70%] mb-4"
+        className="h-[70%] md:w-[350px] w-[70%] mb-4 rounded-tl-md rounded-tr-md  transform transition-transform duration-300 hover:scale-105"
         style={{ backgroundColor: seller.background }}
       />
       <h3 className="text-lg font-semibold text-gray-700 mb-2">
