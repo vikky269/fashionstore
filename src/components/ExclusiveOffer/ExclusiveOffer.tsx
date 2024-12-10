@@ -4,7 +4,7 @@ const ExclusiveOffer: React.FC = () => {
   return (
         <section className="flex justify-center items-center font-title mb-6">
 
-            <div className="bg-[#997b18] px-12 flex pt-6 flex-col lg:flex-row items-center justify-center lg:justify-between gap-8">
+            <div className="bg-[#e0b937] px-12 flex pt-6 flex-col lg:flex-row items-center justify-center lg:justify-between gap-8">
                 {/* Image Section */}
                 <div className="relative mt-2">
                     <img
