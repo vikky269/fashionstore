@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
 
       {/* Footer Bottom */}
       <div className="container mx-auto px-4 mt-8 border-t border-[#4A4A4A] pt-4 flex flex-col md:flex-row justify-between text-sm">
-        <p className="mt-4">&copy; 2024 Rivo</p>
+        <p className="mt-4">&copy; 2024 DWHITE STORES</p>
         <div className="flex space-x-4 mt-4">
           <a href="#" className="hover:text-[#D9A437]">
             Terms

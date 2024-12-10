@@ -28,7 +28,7 @@ const Feedback:React.FC = () => {
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 mt-6 py-4 mx-4'>
               {Testimony.map((item) => (
                   
-                      <div className='flex flex-col items-start justify-start p-6 shadow-lg cursor-pointer rounded-md hover:bg-[#927618]'>
+                      <div className='flex flex-col items-start justify-start p-6 shadow-lg cursor-pointer rounded-md hover:bg-[#d1ac30]'>
                           <img src='/feed.png' alt={item.name}  />
                           <h3 className='mt-4 text-lg font-medium text-black'>{item.name}</h3>
                           <p className='mt-2  max-w-[17rem] md:max-w-[19rem] text-black text-sm'>{item.message}</p>
