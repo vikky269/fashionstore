@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
              <img src="/instagram.png" alt="" className="w-5 h-5" />
             </a>
             <a href="#" aria-label="Twitter" >
-              <img src="/twitter.png" alt="" className="w-5 h-5" />
+              <img src="/tiktok.png" alt="" className="w-5 h-5" />
             </a>
             <a href="#" aria-label="Instagram" >
             <img src="/facebbok.png" alt="" className="w-5 h-5" />
