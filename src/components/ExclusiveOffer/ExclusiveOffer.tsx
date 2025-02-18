@@ -1,6 +1,17 @@
 import React from "react";
+import CountdownTimer from "./CountdownTimer";
 
 const ExclusiveOffer: React.FC = () => {
+
+const buyNow = ()=> {
+    const whatsappNumber = "09020009346"; // Replace with your phone number in international format
+
+    const whatsappLink = `https://wa.me/${whatsappNumber}`;
+
+    window.open(`${whatsappLink}`, '_blank');
+  
+}
+
   return (
         <section className="flex justify-center items-center font-title mb-6">
 
@@ -30,7 +41,7 @@ const ExclusiveOffer: React.FC = () => {
                     </p>
 
                     {/* Countdown Timer */}
-                    <div className="flex justify-center lg:justify-start gap-4 mb-6 cursor-pointer">
+                    {/* <div className="flex justify-center lg:justify-start gap-4 mb-6 cursor-pointer">
                         <div className="bg-white rounded-lg shadow p-4">
                             <p className="text-xl font-bold text-[#1A1A1A]">06</p>
                             <p className="text-sm text-[#1A1A1A]">Days</p>
@@ -43,10 +54,12 @@ const ExclusiveOffer: React.FC = () => {
                             <p className="text-xl font-bold text-[#1A1A1A]">48</p>
                             <p className="text-sm text-[#1A1A1A]">Mins</p>
                         </div>
-                    </div>
+                    </div> */}
+
+                    <CountdownTimer />
 
                     {/* Button */}
-                    <button className="bg-[#1A1A1A] text-white px-6 py-3 mb-6 rounded-lg hover:bg-black transition">
+                    <button onClick={buyNow} className="bg-[#1A1A1A] text-white px-6 py-3 mb-6 rounded-lg hover:bg-black transition">
                         BUY NOW
                     </button>
                 </div>

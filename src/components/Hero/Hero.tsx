@@ -23,7 +23,7 @@ const HeroSection: React.FC = () => {
           // src="/heroimg.png" 
           src='/dwhite/dw1.JPG'
           alt="Fashion model"
-          className=" bg-[#6BC785] rounded-tl-[60px] rounded-tr-[32px] rounded-bl-[32px] rounded-br-[60px] shadow-md  h-[400px]"
+          className="rounded-tl-[60px] rounded-tr-[32px] rounded-bl-[32px] rounded-br-[60px] shadow-md  h-[400px]"
         />
       </div>
     </section>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+ import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
 
@@ -10,22 +11,27 @@ const Navbar: React.FC = () => {
   }
 
   return (
-    <nav className="relative font-title flex justify-between items-center px-8 md:px-16 bg-black shadow-sm">
+    <nav className="relative font-title flex justify-between items-center px-8 md:px-10 bg-black shadow-sm">
        <div className='flex items-center justify-start cursor-pointer'>
-        <img src="/dwhite/logo.png" alt="" className='h-[120px] w-35 cursor-pointer' />
+       <a href="/">
+          <img src="/dwhite/logo.png" alt="" className='h-[150px] w-35 cursor-pointer' />
+       </a>
            <div className='hidden md:block'>
               <div className="text-xl font-medium text-white">DWHITE</div>
               <div className="text-md font-medium text-white">Fashion and Jewellery</div>
            </div>
        </div>
       <ul className="hidden md:flex space-x-8 text-gray-100">
-        <li className="hover:text-gray-300 cursor-pointer">Home</li>
-        <li className="hover:text-gray-300 cursor-pointer">Shop</li>
-        <li className="hover:text-gray-300 cursor-pointer">Features</li>
-        <li className="hover:text-gray-300 cursor-pointer">Contact</li>
+        <li className="hover:text-[#B68C1E] cursor-pointer"><a href="/">Home</a></li>
+        <li className="hover:text-[#B68C1E] cursor-pointer">
+          <Link to="/Shop">Shop</Link>
+        </li>
+        <li className="hover:text-[#B68C1E] cursor-pointer">
+          <Link to="/About">About</Link>
+        </li>
       </ul>
       <button className="hidden md:block bg-[#B68C1E] text-white py-2 px-6 rounded-lg hover:bg-[#dbc63a]">
-        Login
+        <a href="/#contact">Contact us</a>
       </button>
 
       {/* Mobile Menu */}
@@ -40,10 +46,18 @@ const Navbar: React.FC = () => {
         {isopen && (
           <div className='absolute top-[75%] left-0 bg-black text-white h-screen  text-2xl  font-medium   font-title w-full pt-20'>
             <ul className="cursor-pointer flex flex-col items-center gap-12 justify-center">
-              <li className="hover:text-[#B68C1E] cursor-pointer">Home</li>
-              <li className=" hover:text-[#B68C1E] cursor-pointer">Shop</li>
-              <li className=" hover:text-[#B68C1E] cursor-pointer">Features</li>
-              <li className=" hover:text-[#B68C1E] cursor-pointer">Contact</li>
+              <li className="hover:text-[#B68C1E] cursor-pointer">
+                <Link to="/">Home</Link>
+              </li>
+              <li className=" hover:text-[#B68C1E] cursor-pointer">
+                <Link to="/Shop">Shop</Link>
+              </li>
+              <li className=" hover:text-[#B68C1E] cursor-pointer">
+                <Link to="/About">About</Link>
+              </li>
+              <li className="bg-[#B68C1E] cursor-pointer">
+                <Link to="/#contact">Contact</Link>
+              </li>
             </ul>
           </div>
         )}

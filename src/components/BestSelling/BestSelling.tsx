@@ -1,5 +1,6 @@
 import React from 'react'
 import BestSellingCard from './BestSellingCard'
+import { Link } from 'react-router-dom'
 
 const BestSeller = [
   
@@ -49,7 +50,9 @@ const BestSelling:React.FC = () => {
         </div>
 
         <button className="mt-12  mb-3 px-6 py-2 text-black border-gray-800 border-2 rounded-md transition hover:text-white hover:bg-[#121212]">
-        See all →
+         <Link to="/Shop">
+            See all →
+         </Link>
       </button>
 
     </section>
