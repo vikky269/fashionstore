@@ -3,6 +3,7 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 import ProductCard from './ProductCard';
+import { products } from '../../data/products';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -10,74 +11,6 @@ interface TabPanelProps {
   value: number;
   className?: string;
 }
-
-
-const products = [
-    {
-      id: 1,
-      // image: "/product1.png",
-      image: "https://res.cloudinary.com/dhoecxgs7/image/upload/v1742626837/IMG_7306-min_jtpq7n.png",
-      title: "Spread Collar Shirt",
-      price: "$38.99",
-      rating: "5.0",
-    },
-    {
-      id: 2,
-      //image: "/product2.png",
-      image: "/dwhite/dw3.JPG",
-      title: "White Solid Formal Shirt",
-      price: "$44.99",
-      rating: "4.9",
-    },
-    {
-      id: 3,
-      // image: "/product5.png",
-      image: "/dwhite/dw5.JPG",
-      title: "Shine On Me Blouse",
-      price: "$42.00",
-      rating: "4.8",
-    },
-    {
-      id: 4,
-      // image: "/product4.png",
-      image: "/dwhite/dw7.JPG",
-      title: "Gray Solid Padded Jacket",
-      price: "$52.99",
-      rating: "4.7",
-    },
-    {
-      id: 5,
-      // image: "/product5.png",
-      image: "/dwhite/dw10.JPG",
-      title: "Printed Loose T-shirt",
-      price: "$39.99",
-      rating: "5.0",
-    },
-    {
-      id: 6,
-      // image: "/product6.png",
-      image: "/dwhite/dw8.JPG",
-      title: "Summer Wind Crop Shirt",
-      price: "$39.99",
-      rating: "4.7",
-    },
-    {
-      id: 7,
-      // image: "/product7.png",
-      image: "/dwhite/dw9.JPG",
-      title: "Tailored Jacket",
-      price: "$46.00",
-      rating: "4.5",
-    },
-    {
-      id: 8,
-      // image: "/product1.png",
-      image: "/dwhite/dw2.JPG",
-      title: "Solid Round Neck T-shirt",
-      price: "$36.00",
-      rating: "5.0",
-    },
-  ];
 
 function CustomTabPanel(props: TabPanelProps) {
   const { children, value, index, ...other } = props;

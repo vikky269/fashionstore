@@ -1,111 +1,79 @@
-import  { useState } from 'react';
-import { Helmet } from "react-helmet";
 
+import { Helmet } from "react-helmet";
+import { useParams } from "react-router-dom";
+import { products } from "../../data/products";
 
 interface ProductDetailsProps {
-    product: {
-        id: number;
-        image: string;
-        title: string;
-        price: string;
-        rating: string;
-    };
+  id: number;
+  image: string;
+  title: string;
+  price: string;
+  rating: string;
 }
 
+
+
 const ProductDetails = () => {
-    const [isHovered, setIsHovered] = useState(false);
-
-    const product = {
-        id: 1,
-        image: "https://res.cloudinary.com/dhoecxgs7/image/upload/v1742626837/IMG_7306-min_jtpq7n.png",
-        title: "Spread Collar Shirt",
-        price: "$38.99",
-        rating: "5.0",
-    }
-    const handleBuyNow = (product: ProductDetailsProps["product"]) => {
-        if (!product || !product.image) {
-            console.error("Product data is missing!");
-            return;
-        }
-
-        // Ensure product.image is a direct Google Drive link
-        // const productImage = product.image.includes("drive.google.com")
-        //   ? product.image
-        //   : `${product.image}`;
-
-        // Message without the image URL inside the text
-        const message = `Hello, I'm interested in this product:\n\n*${product.title}*\n💰 Price: ${product.price}`;
-
-        // Update meta tags dynamically
-        const updateMetaTags = () => {
-            document.querySelector('meta[property="og:title"]')?.setAttribute("content", product.title);
-            // document.querySelector('meta[property="og:description"]')?.setAttribute("content", product.description);
-            document.querySelector('meta[property="og:image"]')?.setAttribute("content", product.image);
-            document.querySelector('meta[property="og:url"]')?.setAttribute("content", window.location.href);
-        };
-
-        updateMetaTags();
-
-        // WhatsApp API link
-        const whatsappUrl = `https://wa.me/2349020009346?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, "_blank");
+    const { productId } = useParams();
+    const product = products.find((product) => product.id === Number(productId)) as ProductDetailsProps;
+  
+    const handleBuyNow = (product: ProductDetailsProps) => {
+      if (!product) {
+        console.error("Product data is missing!");
+        return;
+      }
+  
+      const currentProductURL = window.location.href;
+  
+      const message = `Hello, I'm interested in this product:\n\n*${product.title}*\n💰 Price: ${product.price}\n\n🔗 View product: ${currentProductURL}`;
+  
+      const whatsappUrl = `https://wa.me/2349020009346?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, "_blank");
     };
-
+  
     return (
-        <>
-            <Helmet>
-                <meta property="og:title" content={product.title} />
-                {/* <meta property="og:description" content={product.description} /> */}
-                <meta property="og:image" content={product.image} />
-                <meta property="og:url" content={window.location.href} />
-                <meta property="og:type" content="product" />
-            </Helmet>
-            <div
-                className="relative flex flex-col items-center mb-6 group cursor-pointer"
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-            >
-                {/* Product Image Container */}
-                <div className="relative w-[75%] md:w-[280px]">
-                    {/* Product Image */}
-                    <img
-                        src={product.image}
-                        alt={product.title}
-                        className="md:h-[250px] w-full mb-4 rounded-md cursor-pointer transform transition-transform group-hover:scale-105 duration-300"
-                    />
-
-                    {/* Animated Overlay */}
-                    <div
-                        className={`absolute inset-0 bg-black/50 flex justify-center items-center rounded-md transition-all duration-300 ease-in-out 
-          ${isHovered ? "opacity-100 scale-100" : "opacity-0 scale-95"}`}
-                    >
-                        <button
-                            onClick={() => handleBuyNow(product)}
-                            className="bg-white text-black font-semibold py-2 px-5 rounded-md shadow-lg transition-transform transform hover:scale-110"
-                        >
-                            Buy Now
-                        </button>
-                    </div>
-                </div>
-
-                {/* Product Details */}
-                <h3 className="text-sm font-semibold text-[#373737] mb-2">
-                    {product.title}
-                </h3>
-                <div className="flex justify-center gap-6 items-center">
-                    <p className="text-gray-800 text-sm font-medium mb-1 border-r-2 pr-5 border-black">
-                        {product.price}
-                    </p>
-                    <p className="text-gray-500 text-sm">{product.rating} ⭐</p>
-                </div>
+      <>
+        <Helmet>
+          <meta property="og:title" content={product.title} />
+          <meta property="og:image" content={product.image} />
+          <meta property="og:url" content={window.location.href} />
+          <meta property="og:type" content="product" />
+        </Helmet>
+  
+        {/* Grid Layout */}
+        <div className="container mx-auto px-4 md:px-10 py-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Left Side - Product Image */}
+            <div className="flex justify-center cursor-pointer">
+              <img
+                src={product.image}
+                alt={product.title}
+                className="w-full md:w-[500px] h-auto rounded-lg shadow-lg hover:shadow-xl"
+              />
             </div>
-        </>
+  
+            {/* Right Side - Product Details */}
+            <div className="flex flex-col justify-center">
+              <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">{product.title}</h1>
+              <p className="text-lg text-gray-700 mb-2">⭐ {product.rating} / 5</p>
+              <p className="text-2xl font-semibold text-green-600 mb-4">{product.price}</p>
+              {/* <p className="text-gray-600 text-base mb-6">{product.description}</p> */}
+  
+              {/* WhatsApp Button */}
+              <button
+                onClick={() => handleBuyNow(product)}
+                className="bg-green-500 text-white text-lg font-medium  w-fit py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+              >
+                Chat on WhatsApp
+              </button>
+            </div>
+          </div>
+        </div>
+      </>
     );
-};
-
-export default ProductDetails;
-
-
+  };
+  
+  export default ProductDetails;
 
 
 
@@ -127,33 +95,6 @@ export default ProductDetails;
 
 
 
-// interface ProductDetailsProps {
-//   product: {
-//       id: number;
-//       image: string;
-//       title: string;
-//       price: string;
-//       rating: string;
-//   }
-// }
 
-// const ProductDetails:React.FC<ProductDetailsProps> = ({product}) => {
-// return (
-//   <div className='flex flex-col items-center mb-6'>
-//           <img
-//             src={product.image}
-//             alt={product.title}
-//             className="md:h-[250px] md:w-[280px] w-[75%] mb-4 rounded-tl-md rounded-tr-md cursor-pointer transform transition-transform hover:scale-105 duration-300"
-//           />
-//           <h3 className="text-sm font-semibold text-[#373737] text mb-2">
-//             {product.title}
-//           </h3>
-//         <div className='flex justify-center gap-6 items-center'>
-//             <p className="text-gray-800 text-sm font-medium mb-1 border-r-2 pr-5 border-black">{product.price}</p>
-//             <p className="text-gray-500 text-sm">{product.rating} ⭐</p>
-//         </div>
-//         </div>
-// )
-// }
 
-// export default ProductDetails
+
