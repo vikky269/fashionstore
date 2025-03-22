@@ -31,7 +31,7 @@ const products = [
   {
     id: 4,
     // image: "/product4.png",
-    image: "/dwhite/dw7.JPG",
+    image: "https://drive.google.com/uc?export=view&id=1HSZyaUbrGgm28cAFohmNXkdtMLkKWqp2",
     title: "Gray Solid Padded Jacket",
     price: "$52.99",
     rating: "4.7",

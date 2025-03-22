@@ -9,14 +9,17 @@ const Footer: React.FC = () => {
           <h1 className="text-2xl font-bold">DWHITE</h1>
           <p className="mt-4">Social Media</p>
           <div className="flex space-x-4 mt-4 items-center ">
-            <a href="#" aria-label="Facebook" >
-             <img src="/instagram.png" alt="" className="w-5 h-5" />
+            <a href="https://www.instagram.com/dwhitefashion_jewelrybackup?igsh=MWpzaG1paWptMmlzOA==" aria-label="instagram" target="_blank" >
+             <img src="/ig.png" alt="" className="w-5 h-5" />
             </a>
-            <a href="#" aria-label="Twitter" >
-              <img src="/tiktok.png" alt="" className="w-5 h-5 bg-white" />
+            <a href="https://vm.tiktok.com/ZMBdTJcod/" aria-label="Twitter" target="_blank" >
+              <img src="/tok.png" alt="" className="w-5 h-5" />
             </a>
-            <a href="#" aria-label="Instagram" >
-            <img src="/facebbok.png" alt="" className="w-5 h-5" />
+            <a href="https://www.facebook.com/share/r/1ADancWmvk/" aria-label="Facebook" target="_blank" >
+            <img src="/fb.png" alt="" className="w-5 h-5" />
+            </a>
+            <a href="https://www.threads.net/@dwhitefashion_jewelrybackup" aria-label="Facebook" target="_blank" >
+            <img src="/threaddy.png" alt="" className="w-5 h-5" />
             </a>
           </div>
         </div>
@@ -63,14 +66,14 @@ const Footer: React.FC = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#D9A437]">
+              {/* <a href="#" className="hover:text-[#D9A437]">
                 News
-              </a>
+              </a> */}
             </li>
             <li>
-              <a href="#" className="hover:text-[#D9A437]">
+              {/* <a href="#" className="hover:text-[#D9A437]">
                 Support
-              </a>
+              </a> */}
             </li>
           </ul>
         </div>
@@ -96,7 +99,7 @@ const Footer: React.FC = () => {
 
       {/* Footer Bottom */}
       <div className="container mx-auto px-4 mt-8 border-t border-[#4A4A4A] pt-4 flex flex-col md:flex-row justify-between text-sm">
-        <p className="mt-4">&copy; 2024 DWHITE STORES</p>
+        <p className="mt-4">&copy; 2025 DWHITE STORES</p>
         <div className="flex space-x-4 mt-4">
           <a href="#" className="hover:text-[#D9A437]">
             Terms

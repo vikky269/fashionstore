@@ -16,7 +16,7 @@ const products = [
     {
       id: 1,
       // image: "/product1.png",
-      image: "/dwhite/dw2.JPG",
+      image: "https://res.cloudinary.com/dhoecxgs7/image/upload/v1742626837/IMG_7306-min_jtpq7n.png",
       title: "Spread Collar Shirt",
       price: "$38.99",
       rating: "5.0",
@@ -142,7 +142,7 @@ export default function BasicTabs() {
                       }}
                   />
                   <Tab
-                      label="Hot"
+                      label="Handbags"
                       {...a11yProps(1)}
                       sx={{
                           color: '#1A1A1A',
@@ -155,7 +155,7 @@ export default function BasicTabs() {
                       }}
                   />
                   <Tab
-                      label="New Arrivals"
+                      label="Abayas / Female Clothings"
                       {...a11yProps(2)}
                       sx={{
                           color: '#1A1A1A',
@@ -164,6 +164,7 @@ export default function BasicTabs() {
                           '&.Mui-selected': {
                               color: '#B68C1E',
                               backgroundColor: '#FFF3CD',
+                              
                           },
                       }}
                   />

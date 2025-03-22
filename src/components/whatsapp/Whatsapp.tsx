@@ -6,7 +6,7 @@ import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 
 const Whatsapp:React.FC = () => {
-  const whatsappNumber = "09020009346"; // Replace with your phone number in international format
+  const whatsappNumber = "2349020009346"; // Replace with your phone number in international format
 
   const whatsappLink = `https://wa.me/${whatsappNumber}`;
   
