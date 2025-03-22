@@ -36,34 +36,34 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   //   window.open(whatsappUrl, "_blank");
   // };
 
-  const handleBuyNow = (product: ProductCardProps["product"]) => {
-    if (!product || !product.image) {
-      console.error("Product data is missing!");
-      return;
-    }
+  // const handleBuyNow = (product: ProductCardProps["product"]) => {
+  //   if (!product || !product.image) {
+  //     console.error("Product data is missing!");
+  //     return;
+  //   }
 
-    // Ensure product.image is a direct Google Drive link
-    // const productImage = product.image.includes("drive.google.com")
-    //   ? product.image
-    //   : `${product.image}`;
+  //   // Ensure product.image is a direct Google Drive link
+  //   // const productImage = product.image.includes("drive.google.com")
+  //   //   ? product.image
+  //   //   : `${product.image}`;
 
-    // Message without the image URL inside the text
-    const message = `Hello, I'm interested in this product:\n\n*${product.title}*\n💰 Price: ${product.price}`;
+  //   // Message without the image URL inside the text
+  //   const message = `Hello, I'm interested in this product:\n\n*${product.title}*\n💰 Price: ${product.price}`;
 
-    // Update meta tags dynamically
-    const updateMetaTags = () => {
-      document.querySelector('meta[property="og:title"]')?.setAttribute("content", product.title);
-      // document.querySelector('meta[property="og:description"]')?.setAttribute("content", product.description);
-      document.querySelector('meta[property="og:image"]')?.setAttribute("content", product.image);
-      document.querySelector('meta[property="og:url"]')?.setAttribute("content", window.location.href);
-    };
+  //   // Update meta tags dynamically
+  //   const updateMetaTags = () => {
+  //     document.querySelector('meta[property="og:title"]')?.setAttribute("content", product.title);
+  //     // document.querySelector('meta[property="og:description"]')?.setAttribute("content", product.description);
+  //     document.querySelector('meta[property="og:image"]')?.setAttribute("content", product.image);
+  //     document.querySelector('meta[property="og:url"]')?.setAttribute("content", window.location.href);
+  //   };
 
-    updateMetaTags();
+  //   updateMetaTags();
 
-    // WhatsApp API link
-    const whatsappUrl = `https://wa.me/2349020009346?text=${encodeURIComponent(message)}`;
-    window.open(whatsappUrl, "_blank");
-  };
+  //   // WhatsApp API link
+  //   const whatsappUrl = `https://wa.me/2349020009346?text=${encodeURIComponent(message)}`;
+  //   window.open(whatsappUrl, "_blank");
+  // };
 
   return (
     <>
