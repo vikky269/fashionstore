@@ -2,7 +2,7 @@ export const products = [
     {
       id: 1,
       // image: "/product1.png",
-      image: "https://res.cloudinary.com/dhoecxgs7/image/upload/v1742636692/dw2_ehenye.jpg",
+      image: "https://res.cloudinary.com/dhoecxgs7/image/upload/v1742637048/dw2_r7mg6z.jpg",
       title: "Spread Collar Shirt",
       price: "$38.99",
       rating: "5.0",

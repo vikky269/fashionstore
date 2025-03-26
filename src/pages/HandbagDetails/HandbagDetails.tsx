@@ -1,8 +1,6 @@
-
 import { Helmet } from "react-helmet";
-import { useLocation, useParams } from "react-router-dom";
-import { products } from "../../data/products";
-import { useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { handbags } from "../../data/handbag";
 
 interface ProductDetailsProps {
   id: number;
@@ -13,19 +11,9 @@ interface ProductDetailsProps {
 }
 
 
-
-const ProductDetails = () => {
+const HandbagDetails = () => {
     const { productId } = useParams();
-    const product = products.find((product) => product.id === Number(productId)) as ProductDetailsProps;
-
-    const { pathname } = useLocation();
-
-    console.log("pathname", pathname)
-  useEffect(() => {
-    console.log("Before scrollTo:", window.scrollY);
-    window.scrollTo(0, 0);
-    console.log("After scrollTo:", window.scrollY);
-  }, [pathname]);
+    const product = handbags.find((product) => product.id === Number(productId)) as ProductDetailsProps;
   
     const handleBuyNow = (product: ProductDetailsProps) => {
       if (!product) {
@@ -81,30 +69,6 @@ const ProductDetails = () => {
         </div>
       </>
     );
-  };
-  
-  export default ProductDetails;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default HandbagDetails

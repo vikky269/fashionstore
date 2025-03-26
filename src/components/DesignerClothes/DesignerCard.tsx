@@ -16,7 +16,7 @@ const DesignerCard:React.FC<DesignerCardProps> = ({designer}) => {
     <img
       src={designer.image}
       alt={designer.title}
-      className="md:h-[400px] w-[65%] md:W-[85%] mb-4 border-2 border-[#997b18] px-1 py-1 hover:scale-105 transition-transform transform"
+      className="md:h-[400px] w-[65%] mb-4 border-2 border-[#997b18] px-1 py-1 hover:scale-105 transition-transform transform"
       // style={{ backgroundColor: designer.background }}
     />
     <h3 className="text-lg font-semibold text-gray-700 mb-2">

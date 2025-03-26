@@ -39,14 +39,14 @@ const Footer: React.FC = () => {
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#D9A437]">
+              {/* <a href="#" className="hover:text-[#D9A437]">
                 Pricing
-              </a>
+              </a> */}
             </li>
             <li>
-              <a href="#" className="hover:text-[#D9A437]">
+              {/* <a href="#" className="hover:text-[#D9A437]">
                 Releases
-              </a>
+              </a> */}
             </li>
           </ul>
         </div>
@@ -56,12 +56,12 @@ const Footer: React.FC = () => {
           <h2 className="font-semibold mb-4">COMPANY</h2>
           <ul className="space-y-2">
             <li>
-              <a href="#" className="hover:text-[#D9A437]">
+              <a href="/About" className="hover:text-[#D9A437]">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-[#D9A437]">
+              <a href="https://linktr.ee/dwhiteluxury" className="hover:text-[#D9A437]" target="_blank">
                 Contact
               </a>
             </li>

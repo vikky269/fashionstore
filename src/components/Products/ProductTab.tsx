@@ -2,8 +2,14 @@ import * as React from 'react';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
-import ProductCard from './ProductCard';
-import { products } from '../../data/products';
+// import ProductCard from './ProductCard';
+// import { products } from '../../data/products';
+import { abayas } from '../../data/abaya';
+import { handbags } from '../../data/handbag';
+import { jewelry } from '../../data/jewellery';
+import AbayaCard from '../Abaya/AbayaCard';
+import HandbagCard from '../Handbag/HandbagCard';
+import JewelleryCard from '../Jewellery/JewelleryCard';
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -61,8 +67,8 @@ export default function BasicTabs() {
                       },
                   }}
               >
-                  <Tab
-                      label="Sale"
+                  {/* <Tab
+                      label="sale"
                       {...a11yProps(0)}
                       sx={{
                           color: '#1A1A1A', // Default text color
@@ -73,10 +79,10 @@ export default function BasicTabs() {
                               backgroundColor: '#FFF3CD', // Background color when active
                           },
                       }}
-                  />
+                  /> */}
                   <Tab
                       label="Handbags"
-                      {...a11yProps(1)}
+                      {...a11yProps(0)}
                       sx={{
                           color: '#1A1A1A',
                           fontSize: { xs: "12px", sm: "14px", md: "16px" }, // Responsive font size
@@ -88,8 +94,8 @@ export default function BasicTabs() {
                       }}
                   />
                   <Tab
-                      label="Abayas / Female Clothings"
-                      {...a11yProps(2)}
+                      label="Abayas"
+                      {...a11yProps(1)}
                       sx={{
                           color: '#1A1A1A',
                           fontSize: { xs: "12px", sm: "14px", md: "16px" }, // Responsive font size
@@ -103,7 +109,7 @@ export default function BasicTabs() {
                   />
                   <Tab
                       label="Jewelleries"
-                      {...a11yProps(3)}
+                      {...a11yProps(2)}
                       sx={{
                           color: '#1A1A1A',
                           fontSize: { xs: "12px", sm: "14px", md: "16px" }, // Responsive font size
@@ -117,21 +123,33 @@ export default function BasicTabs() {
               </Tabs>
 
           </Box>
-      <CustomTabPanel value={value} index={0} >
+      {/* <CustomTabPanel value={value} index={0} >
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 md:gap-4 pt-8">
         {products.map((product) => (
          <ProductCard  key={product.id} product={product}/>
         ))}
       </div>
+      </CustomTabPanel> */}
+      <CustomTabPanel value={value} index={0}>
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 md:gap-4 pt-8">
+        {handbags.map((product) => (
+         <HandbagCard  key={product.id} product={product}/>
+        ))}
+      </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Hot products at the moment
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 md:gap-4 pt-8">
+        {abayas.map((product) => (
+         <AbayaCard  key={product.id} product={product}/>
+        ))}
+      </div>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Our New arrivals
-      </CustomTabPanel>
-      <CustomTabPanel value={value} index={3}>
-        Jewelleries item goes here
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-4 md:gap-4 pt-8">
+        {jewelry.map((product) => (
+         <JewelleryCard  key={product.id} product={product}/>
+        ))}
+      </div>
       </CustomTabPanel>
     </Box>
   );

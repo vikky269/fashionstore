@@ -31,7 +31,7 @@ const Navbar: React.FC = () => {
         </li>
       </ul>
       <button className="hidden md:block bg-[#B68C1E] text-white py-2 px-6 rounded-lg hover:bg-[#dbc63a]">
-        <a href="/#contact">Contact us</a>
+        <a href="https://linktr.ee/dwhiteluxury" target='_blank'>Contact us</a>
       </button>
 
       {/* Mobile Menu */}
@@ -55,8 +55,8 @@ const Navbar: React.FC = () => {
               <li className=" hover:text-[#B68C1E] cursor-pointer">
                 <Link to="/About">About</Link>
               </li>
-              <li className="bg-[#B68C1E] cursor-pointer">
-                <Link to="/#contact">Contact</Link>
+              <li className="bg-[#B68C1E] cursor-pointer px-4 py-2 rounded-lg">
+                <Link to={'https://linktr.ee/dwhiteluxury'}>Contact</Link>
               </li>
             </ul>
           </div>
