@@ -44,18 +44,18 @@ const Navbar: React.FC = () => {
 
        {/* Menu Items */}
         {isopen && (
-          <div className='absolute top-[75%] left-0 bg-black text-white h-screen  text-2xl  font-medium   font-title w-full pt-20'>
+          <div className='absolute top-[75%] left-0 bg-black text-white h-screen  text-2xl  font-medium z-50  font-title w-full pt-20'>
             <ul className="cursor-pointer flex flex-col items-center gap-12 justify-center">
-              <li className="hover:text-[#B68C1E] cursor-pointer">
+              <li className="hover:text-[#B68C1E] cursor-pointer" onClick={()=>setisopen(!isopen)}>
                 <Link to="/">Home</Link>
               </li>
-              <li className=" hover:text-[#B68C1E] cursor-pointer">
+              <li className=" hover:text-[#B68C1E] cursor-pointer"  onClick={()=>setisopen(!isopen)}>
                 <Link to="/Shop">Shop</Link>
               </li>
-              <li className=" hover:text-[#B68C1E] cursor-pointer">
+              <li className=" hover:text-[#B68C1E] cursor-pointer"  onClick={()=>setisopen(!isopen)}>
                 <Link to="/About">About</Link>
               </li>
-              <li className="bg-[#B68C1E] cursor-pointer px-4 py-2 rounded-lg">
+              <li className="bg-[#B68C1E] cursor-pointer px-4 py-2 rounded-lg"  onClick={()=>setisopen(!isopen)}>
                 <Link to={'https://linktr.ee/dwhiteluxury'}>Contact</Link>
               </li>
             </ul>

@@ -7,6 +7,7 @@ import ProductDetails from "./pages/ProductDetails/ProductDetails"
 import AbayaDetails from "./pages/AbayaDetails/AbayaDetails"
 import HandbagDetails from "./pages/HandbagDetails/HandbagDetails"
 import JewelleryDetails from "./pages/JewelleryDetails/JewelleryDetails"
+import ScrollToTop from "./components/ScrollToTop"
 
 
 
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />

@@ -25,7 +25,7 @@ const AbayaDetails = () => {
    
        const message = `Hello, I'm interested in this product:\n\n*${product.title}*\n💰 Price: ${product.price}\n\n🔗 View product: ${currentProductURL}`;
    
-       const whatsappUrl = `https://wa.me/2349020009346?text=${encodeURIComponent(message)}`;
+       const whatsappUrl = `https://wa.me/2347070442041?text=${encodeURIComponent(message)}`;
        window.open(whatsappUrl, "_blank");
      };
    
@@ -46,7 +46,8 @@ const AbayaDetails = () => {
                <img
                  src={product.image}
                  alt={product.title}
-                 className="w-full md:w-[500px] h-auto rounded-lg shadow-lg hover:shadow-xl"
+                 className="w-full md:w-[450px] h-[450px] rounded-lg shadow-lg hover:shadow-xl"
+                 loading="lazy"
                />
              </div>
    
@@ -54,15 +55,15 @@ const AbayaDetails = () => {
              <div className="flex flex-col justify-center">
                <h1 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">{product.title}</h1>
                <p className="text-lg text-gray-700 mb-2">⭐ {product.rating} / 5</p>
-               <p className="text-2xl font-semibold text-green-600 mb-4">{product.price}</p>
+               <p className="text-2xl font-semibold text-black mb-4">{product.price}</p>
                {/* <p className="text-gray-600 text-base mb-6">{product.description}</p> */}
    
                {/* WhatsApp Button */}
                <button
                  onClick={() => handleBuyNow(product)}
-                 className="bg-green-500 text-white text-lg font-medium  w-fit py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
+                 className="bg-black text-white text-lg font-medium  w-fit py-3 px-6 rounded-lg shadow-md transition-transform transform hover:scale-105"
                >
-                 Chat on WhatsApp
+                 Buy Now
                </button>
              </div>
            </div>
