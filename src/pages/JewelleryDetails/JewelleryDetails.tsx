@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
 import { jewelry } from "../../data/jewellery";
-import { useEffect } from "react";
-import { useState } from "react";
+
 
 interface ProductDetailsProps {
   id: number;
@@ -16,15 +15,15 @@ const JewelleryDetails = () => {
     const { productId } = useParams();
     const product = jewelry.find((product) => product.id === Number(productId)) as ProductDetailsProps;
   
-    useEffect(() => {
-      console.log("Product ID:", productId);
-    }, [productId]);
+  //   useEffect(() => {
+  //     console.log("Product ID:", productId);
+  //   }, [productId]);
 
-  const [currentURL, setCurrentURL] = useState("");
+  // const [currentURL, setCurrentURL] = useState("");
 
-  useEffect(() => {
-    setCurrentURL(window.location.href);
-  }, []);
+  // useEffect(() => {
+  //   setCurrentURL(window.location.href);
+  // }, []);
 
     
 
@@ -38,7 +37,7 @@ const JewelleryDetails = () => {
   
       const message = `Hello, I'm interested in this product:\n\n*${product.title}*\n💰 Price: ${product.price}\n\n🔗 View product: ${currentProductURL}`;
   
-      const whatsappUrl = `https://wa.me/2347070442041?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/2349020009346?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, "_blank");
     };
   
@@ -47,7 +46,7 @@ const JewelleryDetails = () => {
         <Helmet>
           <meta property="og:title" content={product.title} />
           <meta property="og:image" content={product.image} />
-          <meta property="og:url" content={currentURL} />
+          <meta property="og:url" content={window.location.href} />
           <meta property="og:type" content="product" />
         </Helmet>
   

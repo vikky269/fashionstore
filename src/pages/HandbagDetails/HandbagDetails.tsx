@@ -25,7 +25,7 @@ const HandbagDetails = () => {
   
       const message = `Hello, I'm interested in this product:\n\n*${product.title}*\n💰 Price: ${product.price}\n\n🔗 View product: ${currentProductURL}`;
   
-      const whatsappUrl = `https://wa.me/2347070442041?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/2349020009346?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, "_blank");
     };
   
