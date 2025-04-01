@@ -10,7 +10,6 @@ interface ProductDetailsProps {
   price: string;
   rating: string;
 }
-
 const JewelleryDetails = () => {
     const { productId } = useParams();
     const product = jewelry.find((product) => product.id === Number(productId)) as ProductDetailsProps;
@@ -25,7 +24,7 @@ const JewelleryDetails = () => {
   //   setCurrentURL(window.location.href);
   // }, []);
 
-    
+ 
 
     const handleBuyNow = (product: ProductDetailsProps) => {
       if (!product) {
@@ -37,7 +36,7 @@ const JewelleryDetails = () => {
   
       const message = `Hello, I'm interested in this product:\n\n*${product.title}*\n💰 Price: ${product.price}\n\n🔗 View product: ${currentProductURL}`;
   
-      const whatsappUrl = `https://wa.me/2347070442041?text=${encodeURIComponent(message)}`;
+      const whatsappUrl = `https://wa.me/2348063938500?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, "_blank");
     };
   
