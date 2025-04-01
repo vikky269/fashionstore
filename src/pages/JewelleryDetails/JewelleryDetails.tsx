@@ -40,7 +40,7 @@ const JewelleryDetails = () => {
       // window.open(whatsappUrl, "_blank");
 
       const message = encodeURIComponent(`Hello, I'm interested in this product:\n\n${product.title}\n💰 Price: ${product.price}\n🔗 View product: ${currentProductURL}`);
-      const whatsappUrl = `https://api.whatsapp.com/send?phone=2347070442041&text=${message}`;
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=2349020009346&text=${message}`;
       window.open(whatsappUrl, "_blank");
 
     };
