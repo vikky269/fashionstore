@@ -34,10 +34,15 @@ const JewelleryDetails = () => {
   
       const currentProductURL = window.location.href;
   
-      const message = `Hello, I'm interested in this product:\n\n*${product.title}*\n💰 Price: ${product.price}\n\n🔗 View product: ${currentProductURL}`;
+      // const message = `Hello, I'm interested in this product:\n\n*${product.title}*\n💰 Price: ${product.price}\n\n🔗 View product: ${currentProductURL}`;
   
-      const whatsappUrl = `https://wa.me/2348063938500?text=${encodeURIComponent(message)}`;
+      // const whatsappUrl = `https://wa.me/2348063938500?text=${encodeURIComponent(message)}`;
+      // window.open(whatsappUrl, "_blank");
+
+      const message = encodeURIComponent(`Hello, I'm interested in this product:\n\n${product.title}\n💰 Price: ${product.price}\n🔗 View product: ${currentProductURL}`);
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=2348063938500&text=${message}`;
       window.open(whatsappUrl, "_blank");
+
     };
   
     return (
